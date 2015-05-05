@@ -17,6 +17,8 @@ namespace A01_Empty
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseStaticFiles();
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

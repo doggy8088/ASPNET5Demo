@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Routing;
@@ -29,6 +30,8 @@ namespace A02_WebAPI
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseErrorPage(ErrorPageOptions.ShowAll);
+
             // Configure the HTTP request pipeline.
             app.UseStaticFiles();
 

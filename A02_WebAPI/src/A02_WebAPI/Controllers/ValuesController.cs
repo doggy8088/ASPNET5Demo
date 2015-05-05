@@ -20,6 +20,8 @@ namespace A02_WebAPI.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+            throw new Exception("Down");
+
             return "value";
         }
 
